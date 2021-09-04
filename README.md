@@ -25,4 +25,5 @@ This program connects to AWS IoT server:
 * Uploading AWS certificates & code to the NodeMCU ESP8266 via 'ESP8266 LittleFS Data Upload' option under Tools menu in Arduino IDE. Then upload the sketch using the 'Upload' button in Arduino IDE.
 * Results
 	* Go to 'Test' menu of AWS IoT column, under Subscription topic, type 'outTopic' and click subscribe button. You will see the results as shown below:
-	[AWS IoT Console Output](ESP8266_AWS_IoTCore/screenshots/aws_console.PNG) 
+	![AWS IoT Console Output](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console1.PNG?raw=true)
+	ESP8266_AWS_IoTCore/screenshots/aws_console.PNG) 
