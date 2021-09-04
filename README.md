@@ -9,9 +9,9 @@ This program connects to AWS IoT server:
 * Subscribes to the topic "inTopic", printing out any messages. In this case I am sending the message "Hello, this is Vidya from AWS IoT console"
 
 ### Steps ###
-* Create an AWS account and go to AWS IoT Core service
+* Create an AWS account and go to AWS IoT Core service.
 * Create a 'Thing' in the AWS, generate a certificate and attach a policy to it.
-* Convert AWS IoT Core credential(Certificate, Private Key, Root CA) from .pem to .der format using OpenSSL. You can install OpenSSL from this link: https://slproweb.com/products/Win32OpenSSL.html 
+* Convert AWS IoT Core credential (Certificate, Private Key, Root CA) from .pem to .der format using OpenSSL. You can install OpenSSL from this link: https://slproweb.com/products/Win32OpenSSL.html 
 * The following commands will convert the downloaded device certificate to the correct format. xxx indicates the input file name and yy indicates the output filename. You may change the filename as per your convenience.
 	* openssl x509 -in xxxxxxxxxx-certificate.pem.crt -out yy.der -outform DER 
 	* openssl rsa -in xxxxxxxxxx-private.pem.key -out yy.der -outform DER
@@ -20,18 +20,18 @@ This program connects to AWS IoT server:
 * Do modifications to the ESP8266_AWS_IoTCore.ino file as per your WiFi credentials
 	* const char* ssid = "my_ssid"; // Give your ssid name
 	* const char* password = "my_password"; //Give your password
-* Change the AWS end point (MQTT broker address) as per your AWS account	
-	* const char* AWS_endpoint = "xxxxxxxxxxxxxx.amazonaws.com"; //Give your end point url in place of 'xxxx'. This can be found in the Custom Endpoint section under Seetings menu.
-* Uploading AWS certificates & code to the NodeMCU ESP8266 via 'ESP8266 LittleFS Data Upload' option under Tools menu in Arduino IDE. Then upload the sketch using the 'Upload' button in Arduino IDE.
+* Change the AWS end point (MQTT broker address) as per your AWS account. This can be found in the Custom Endpoint section under Seetings menu.
+	* const char* AWS_endpoint = "xxxxxxxxxxxxxx.amazonaws.com"; //Give your end point url in place of 'xxxx'. 
+* Upload AWS certificates to the NodeMCU ESP8266 via 'ESP8266 LittleFS Data Upload' option under Tools menu in Arduino IDE. Then upload the sketch using the 'Upload' button in Arduino IDE.
 * Results
 	* Go to 'Test' menu of AWS IoT column, under 'Subscription to a topic', type 'outTopic' and click subscribe button. You will see the results as shown below:
 	![AWS IoT Console Output1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console1.PNG?raw=true)
 	
 	* The serial monitor in the arduino window is shown below:
-	![Serial monitor1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor1.PNG?raw=true)
+	![Serial monitor1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor1.JPG?raw=true)
 	
 	* Go to 'Test' menu of AWS IoT column, under 'Publish to a topic', type 'inTopic' and type the message you want to publish from AWS IoTcore. You will see the results as shown below:
 	![AWS IoT Console Output2](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console2.PNG?raw=true)
 	
 	* The message from the AWS IoT console is being published to NodeMCU ESP8266. The serial monitor in the arduino window is shown below. 
-	![Serial monitor2](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor2.PNG?raw=true)
+	![Serial monitor2](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor2.JPG?raw=true)
