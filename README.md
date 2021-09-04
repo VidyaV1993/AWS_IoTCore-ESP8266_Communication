@@ -28,7 +28,7 @@ This program connects to AWS IoT server:
 	![AWS IoT Console Output1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console1.PNG?raw=true)
 	
 	* The serial monitor in the arduino window is shown below:
-	![Serial monitor1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor1.JPG?raw=true)
+	![Serial monitor1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/serial_monitor1a.JPG?raw=true)
 	
 	* Go to 'Test' menu of AWS IoT column, under 'Publish to a topic', type 'inTopic' and type the message you want to publish from AWS IoTcore. You will see the results as shown below:
 	![AWS IoT Console Output2](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console2.PNG?raw=true)
