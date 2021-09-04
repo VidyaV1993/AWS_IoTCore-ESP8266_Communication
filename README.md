@@ -4,6 +4,10 @@ AWS IoT Core lets you connect IoT devices to the AWS cloud without the need to p
 
 This project illustrates a simple communication between AWS IoT Core and the NodeMCU ESP8266 board via WiFi. I used Arduino IDE and MQTT Protocol for this purpose.
 
+This program connects to AWS IoT server:
+* Publishes "Hello from esp8266" to the topic "outTopic" every three seconds
+* Subscribes to the topic "inTopic", printing out any messages. In this case I am sending the message "Hello, this is Vidya from AWS IoT console"
+
 ### Steps ###
 * Create an AWS account and go to AWS IoT Core service
 * Create a 'Thing' in the AWS, generate a certificate and attach a policy to it.
@@ -12,4 +16,13 @@ This project illustrates a simple communication between AWS IoT Core and the Nod
 	* openssl x509 -in xxxxxxxxxx-certificate.pem.crt -out yy.der -outform DER 
 	* openssl rsa -in xxxxxxxxxx-private.pem.key -out yy.der -outform DER
 	* openssl x509 -in xxxxxxxxxCA1.pem -out yy.der -outform DER
-* Install ESP8266 LittleFS data upload tool in Arduino IDE
+* Install ESP8266 NodeMCU LittleFS Filesystem Uploader in Arduino IDE. Refer this link: https://randomnerdtutorials.com/install-esp8266-nodemcu-littlefs-arduino/ 
+* Do modifications to the ESP8266_AWS_IoTCore.ino file as per your WiFi credentials
+	* const char* ssid = "my_ssid"; // Give your ssid name
+	* const char* password = "my_password"; //Give your password
+* Change the AWS end point (MQTT broker address) as per your AWS account	
+	* const char* AWS_endpoint = "xxxxxxxxxxxxxx.amazonaws.com"; //Give your end point url in place of 'xxxx'. This can be found in the Custom Endpoint section under Seetings menu.
+* Uploading AWS certificates & code to the NodeMCU ESP8266 via 'ESP8266 LittleFS Data Upload' option under Tools menu in Arduino IDE. Then upload the sketch using the 'Upload' button in Arduino IDE.
+* Results
+	* Go to 'Test' menu of AWS IoT column, under Subscription topic, type 'outTopic' and click subscribe button. You will see the results as shown below:
+	[AWS IoT Console Output](ESP8266_AWS_IoTCore/screenshots/aws_console.PNG) 
