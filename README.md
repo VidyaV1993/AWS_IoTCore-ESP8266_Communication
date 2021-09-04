@@ -23,7 +23,7 @@ This program connects to AWS IoT server:
 * Change the AWS end point (MQTT broker address) as per your AWS account. This can be found in the Custom Endpoint section under Seetings menu.
 	* const char* AWS_endpoint = "xxxxxxxxxxxxxx.amazonaws.com"; //Give your end point url in place of 'xxxx'. 
 * Upload AWS certificates to the NodeMCU ESP8266 via 'ESP8266 LittleFS Data Upload' option under Tools menu in Arduino IDE. Then upload the sketch using the 'Upload' button in Arduino IDE.
-* Results
+* Results:
 	* Go to 'Test' menu of AWS IoT column, under 'Subscription to a topic', type 'outTopic' and click subscribe button. You will see the results as shown below:
 	![AWS IoT Console Output1](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/aws_console1.PNG?raw=true)
 	
