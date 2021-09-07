@@ -49,4 +49,4 @@ AWS IoT Core lets you connect IoT devices to the AWS cloud without the need to p
 * Illustrated how to control the the built-in LED present in the esp8266 board from AWS IoT console.
 * In the same way, it is possible to control other devices and AC appliances for home automation using AWS IoT Core.
 
-![LED ON-OFF](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/LED_On_off.mp4?raw=true)
+https://user-images.githubusercontent.com/50157188/132419452-2479df92-1668-48d6-8277-da78ea248c66.mp4
