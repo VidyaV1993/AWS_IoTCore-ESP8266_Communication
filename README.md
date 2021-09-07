@@ -1,4 +1,4 @@
-# AWS IoT Core - ESP8266 Communication
+# Control devices using AWS IoT Core - ESP8266 Communication
 
 This project illustrates how to set up a simple communication between AWS IoT Core and the NodeMCU ESP8266 board via WiFi and control the built in LED on the ESP8266 board from AWS IoT Core. I used Arduino IDE and MQTT Protocol for this purpose.
 
@@ -43,3 +43,8 @@ AWS IoT Core lets you connect IoT devices to the AWS cloud without the need to p
 	
 * Send the LED OFF command from AWS IoT Console. The command in the AWS IoT Console window, the serial monitor in the arduino IDE and the on board LED is shown below:
 ![LED ON](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/LED_OFF1.JPG?raw=true)
+
+### Conclusion ###
+* Successfully established a communication between AWS IoT Core and the NodeMCU ESP8266 board.
+* Illustrated how to control the the built-in LED present in the esp8266 board from AWS IoT console.
+* In the same way, it is possible to control other devices and AC appliances for home automation using AWS IoT Core.
