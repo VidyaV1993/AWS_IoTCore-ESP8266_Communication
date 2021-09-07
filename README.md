@@ -5,7 +5,7 @@ This project illustrates how to set up a simple communication between AWS IoT Co
 This program connects to AWS IoT server:
 * Publishes "Hello from esp8266" to the topic "outTopic" every three seconds.
 * Subscribes to the topic "inTopic", printing out any messages. 
-* Controls the on board LED present in esp8266 board from AWS IoT console.
+* Controls the built-in LED present in the esp8266 board from AWS IoT console.
 
 ### General Overview on AWS IoT Core ###
 AWS IoT Core lets you connect IoT devices to the AWS cloud without the need to provision or manage servers. AWS IoT Core can support billions of devices and trillions of messages, and can process and route those messages to AWS endpoints and to other devices reliably and securely.
