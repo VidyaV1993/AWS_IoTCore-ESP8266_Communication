@@ -1,11 +1,9 @@
 /*
   Upload date: 09/03/2021
 
-  AWS Iot Core
-
   This example needs https://github.com/esp8266/arduino-esp8266fs-plugin
 
-  It connects to AWS IoT server then:
+  It connects the esp8266 to AWS IoT server and:
   - publishes "Hello from esp8266" to the topic "outTopic" every three seconds
   - subscribes to the topic "inTopic", printing out any messages
 */
@@ -32,8 +30,24 @@ void callback(char* topic, byte* payload, unsigned int length)
   Serial.print("Message arrived [");
   Serial.print(topic);
   Serial.print("] ");
-  for (int i = 0; i < length; i++) {
-    Serial.print((char)payload[i]);
+  for (int i = 0; i < length; i++) 
+  {
+    Serial.print((char)payload[i]); // Pring payload content
+  }
+  char led = (char)payload[62]; // Extracting the controlling command from the Payload to Controlling LED from AWS
+  Serial.print("led command=");
+  Serial.println(led);
+  if (led == 49) // 49 is the ASCI value of 1
+  {
+    //digitalWrite(D5, HIGH);
+    digitalWrite(LED_BUILTIN, HIGH); // turn the LED on (HIGH is the voltage level) 
+    Serial.println("LED_State changed to HIGH");
+  }
+  else if (led == 48) // 48 is the ASCI value of 0
+  {
+    //digitalWrite(D5, LOW);
+    digitalWrite(LED_BUILTIN, LOW); // turn the LED off by making the voltage LOW 
+    Serial.println("LED_State changed to LOW");
   }
   Serial.println();
 }
@@ -195,8 +209,4 @@ void loop()
     client.publish("outTopic", msg);
     Serial.print("Heap: "); Serial.println(ESP.getFreeHeap()); //Low heap can cause problems
   }
-  digitalWrite(LED_BUILTIN, HIGH); // turn the LED on (HIGH is the voltage level)
-  delay(1000); // wait for a second
-  digitalWrite(LED_BUILTIN, LOW); // turn the LED off by making the voltage LOW
-  delay(1000); // wait for a second
 }
