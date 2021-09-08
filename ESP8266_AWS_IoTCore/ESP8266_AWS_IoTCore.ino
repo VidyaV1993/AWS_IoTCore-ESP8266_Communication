@@ -1,6 +1,4 @@
 /*
-  Upload date: 09/03/2021
-
   This example needs https://github.com/esp8266/arduino-esp8266fs-plugin
 
   This program connects to AWS IoT server:
