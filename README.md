@@ -39,9 +39,21 @@ AWS IoT Core lets you connect IoT devices to the AWS cloud without the need to p
 #### Part 2: Control the on board LED from AWS IoT Console ####
 
 * Send the LED ON command from AWS IoT Console. The command in the AWS IoT Console window, the serial monitor in the arduino IDE and the on board LED is shown below:
+```
+{
+  "message": "Hello from AWS IoT console"
+  "led_Control": "1"
+}
+```
 ![LED ON](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/LED_ON1.JPG?raw=true)
 	
 * Send the LED OFF command from AWS IoT Console. The command in the AWS IoT Console window, the serial monitor in the arduino IDE and the on board LED is shown below:
+```
+{
+  "message": "Hello from AWS IoT console"
+  "led_Control": "0"
+}
+```
 ![LED ON](https://github.com/VidyaV1993/AWS_IoTCore-ESP8266_Communication/blob/main/ESP8266_AWS_IoTCore/screenshots/LED_OFF1.JPG?raw=true)
 
 ### Conclusion ###
