@@ -3,9 +3,10 @@
 
   This example needs https://github.com/esp8266/arduino-esp8266fs-plugin
 
-  It connects the esp8266 to AWS IoT server and:
-  - publishes "Hello from esp8266" to the topic "outTopic" every three seconds
-  - subscribes to the topic "inTopic", printing out any messages
+  This program connects to AWS IoT server:
+  * Publishes "Hello from esp8266" to the topic "outTopic" every three seconds.
+  * Subscribes to the topic "inTopic", printing out any messages. 
+  * Controls the on board LED present in esp8266 board from AWS IoT console.
 */
 
 #include <FS.h>
